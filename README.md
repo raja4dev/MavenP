@@ -4,3 +4,36 @@ HI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blank Checkin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My Check in
+
+
+Good bye 
