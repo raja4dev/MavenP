@@ -13,7 +13,7 @@ steps:
 - task: ArtifactoryMaven@2
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'install'
+    goals: 'clean install'
     artifactoryResolverService: 'art-test'
     targetResolveReleaseRepo: 'maven'
     targetResolveSnapshotRepo: 'maven'
