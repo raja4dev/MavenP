@@ -10,13 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: ArtifactoryMaven@2
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'install'
+    artifactoryResolverService: 'art-test'
+    targetResolveReleaseRepo: 'maven'
+    targetResolveSnapshotRepo: 'maven'
+    artifactoryDeployService: 'art-test'
+    targetDeployReleaseRepo: 'maven'
+    targetDeploySnapshotRepo: 'maven'
